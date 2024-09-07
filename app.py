@@ -23,7 +23,7 @@ def michigan():
                 if len(data) < 1000:
                     data.append({
                         "rate": row[2],
-                        "coordinates": [lat, long[:len(long)-1]]
+                        "coordinates": [float(lat), float(long[:len(long)-1])]
                     })
             except:
                 print("ERROR")
