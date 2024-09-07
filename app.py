@@ -3,7 +3,7 @@ from flask_cors import CORS, cross_origin
 import csv
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=['http://localhost:5713/'])
 
 @app.route('/')
 @cross_origin()
@@ -11,7 +11,6 @@ def index():
     return 'Hello'
 
 @app.route('/mi')
-@cross_origin(origins=['http://localhost:5173/contacts/alex-anderson'])
 def michigan():
     data = []
     with open('./mi.csv') as file:
