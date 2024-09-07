@@ -20,10 +20,11 @@ def michigan():
             split = row[3].split('(')
             try:
                 [lat, long] = split[1].split(' ')
-                data.append({
-                    "rate": row[2],
-                    "point": [lat, long[:len(long)-1]]
-                })
+                if len(data) < 1000:
+                    data.append({
+                        "rate": row[2],
+                        "point": [lat, long[:len(long)-1]]
+                    })
             except:
                 print("ERROR")
     return data
