@@ -22,7 +22,7 @@ def michigan():
                 [lat, long] = split[1].split(' ')
                 data.append({
                     "rate": row[2],
-                    "point": [long[:len(long)-1], lat]
+                    "point": [lat, long[:len(long)-1]]
                 })
             except:
                 print("ERROR")
