@@ -11,6 +11,7 @@ def index():
     return 'Hello'
 
 @app.route('/mi')
+@cross_origin()
 def michigan():
     data = []
     with open('./mi.csv') as file:
