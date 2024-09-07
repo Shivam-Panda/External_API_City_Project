@@ -22,7 +22,7 @@ def michigan():
                 [lat, long] = split[1].split(' ')
                 if len(data) < 1000:
                     data.append({
-                        "rate": row[2],
+                        "rate": float(row[2]),
                         "geom": {
                             "coordinates": [float(lat), float(long[:len(long)-1])]
                         }
