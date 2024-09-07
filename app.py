@@ -23,7 +23,9 @@ def michigan():
                 if len(data) < 1000:
                     data.append({
                         "rate": row[2],
-                        "coordinates": [float(lat), float(long[:len(long)-1])]
+                        "geom": {
+                            "coordinates": [float(lat), float(long[:len(long)-1])]
+                        }
                     })
             except:
                 print("ERROR")
